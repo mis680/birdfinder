@@ -1,4 +1,3 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
 import { BIRDS } from './data/index.ts';
 import { find } from './core/search.ts';
 import { FILTERS, predicateFor } from './core/filters.ts';
@@ -8,6 +7,7 @@ import { birdHistograms, histFromImage, useFavorites, useRoute } from './lib.ts'
 import { SearchBar } from './components/SearchBar.tsx';
 import { BirdGrid, type GridItem } from './components/BirdGrid.tsx';
 import { Detail } from './components/Detail.tsx';
+import { Fragment, useEffect, useMemo, useRef, useState } from 'react';
 
 interface Photo { url: string; matches: Match[]; confident: boolean }
 
@@ -91,10 +91,13 @@ export function App() {
     <div className="wrap">
       <header className="hero">
         <h1>
-          {'Name the bird you just saw.'.split(' ').map((w, i) => (
-            <span key={i} style={{ animationDelay: `${i * 80}ms` }}>{w}{' '}{i === 2 && <br />}</span>
-          ))}
-        </h1>
+  {'Name the bird you just saw.'.split(' ').map((w, i) => (
+    <Fragment key={i}>
+      <span style={{ animationDelay: `${i * 80}ms` }}>{w}</span>{' '}
+      {i === 2 && <br />}
+    </Fragment>
+  ))}
+</h1>
         <p>Search {BIRDS.length} birds by name, Hindi name, family or a clue like “green” or “nest”. Or drop in a photo to find the closest match.</p>
       </header>
       <div className="marq" aria-hidden="true">
