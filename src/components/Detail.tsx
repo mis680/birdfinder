@@ -1,7 +1,6 @@
-import { useEffect, useState, type CSSProperties } from 'react';
+import { useEffect, type CSSProperties } from 'react';
 import type { Bird } from '../core/types.ts';
 import { BIRDS, asset } from '../data/index.ts';
-import { playCall } from '../lib.ts';
 
 const wikipediaUrl = (bird: Bird) => {
   try {
@@ -24,7 +23,6 @@ interface Props {
 }
 
 export function Detail({ bird, saved, onToggleSaved, onBack, onOpen }: Props) {
-  const [playing, setPlaying] = useState(false);
   const sameFamily = BIRDS.filter((x) => x.id !== bird.id && x.family === bird.family).slice(0, 3);
   const related = sameFamily.length ? sameFamily : BIRDS.filter((x) => x.id !== bird.id).slice(0, 3);
 
@@ -33,16 +31,6 @@ export function Detail({ bird, saved, onToggleSaved, onBack, onOpen }: Props) {
     window.scrollTo(0, 0);
     return () => { document.title = 'Birdfinder'; };
   }, [bird.id, bird.name]);
-
-  const hear = async () => {
-    try {
-      setPlaying(true);
-      const ms = await playCall(bird);
-      setTimeout(() => setPlaying(false), ms + 300);
-    } catch {
-      setPlaying(false); // AudioContext unavailable
-    }
-  };
 
   return (
     <section aria-labelledby="bird-title">
@@ -59,14 +47,10 @@ export function Detail({ bird, saved, onToggleSaved, onBack, onOpen }: Props) {
           <p className="about">{bird.desc}</p>
           <div className="acts">
             <a className="btn" href={wikipediaUrl(bird)} target="_blank" rel="noopener noreferrer">To know more</a>
-            <button type="button" onClick={hear} className={playing ? 'on' : ''} aria-live="polite">
-              <span className="eq" aria-hidden="true"><i /><i /><i /></span> Hear call sketch
-            </button>
             <button type="button" className="ghost" onClick={onToggleSaved} aria-pressed={saved}>
               {saved ? '♥ Saved' : '♡ Save'}
             </button>
           </div>
-          <p className="note">Call sketches are synthesised from each bird’s call style, not real recordings.</p>
           <p className="note">
             {sameFamily.length ? 'Same family: ' : 'You might also like: '}
             {related.map((x, i) => (
