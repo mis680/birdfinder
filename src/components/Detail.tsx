@@ -3,6 +3,18 @@ import type { Bird } from '../core/types.ts';
 import { BIRDS, asset } from '../data/index.ts';
 import { playCall } from '../lib.ts';
 
+const wikipediaUrl = (bird: Bird) => {
+  try {
+    const link = new URL(bird.more);
+    if (/(^|\.)statueofunitytentcity\.com$/i.test(link.hostname)) {
+      return `https://en.wikipedia.org/wiki/${encodeURIComponent(bird.name.replace(/\s+/g, '_'))}`;
+    }
+  } catch {
+    // Keep the stored link as a fallback; data validation reports malformed links.
+  }
+  return bird.more;
+};
+
 interface Props {
   bird: Bird;
   saved: boolean;
@@ -10,11 +22,6 @@ interface Props {
   onBack: () => void;
   onOpen: (id: string) => void;
 }
-
-const LEGACY_BIRD_LINK = /^https?:\/\/statueofunitytentcity\.com\/docs\/birds\//i;
-const wikipediaUrl = (bird: Bird) => LEGACY_BIRD_LINK.test(bird.more)
-  ? `https://en.wikipedia.org/wiki/${encodeURIComponent(bird.name.replace(/\s+/g, '_'))}`
-  : bird.more;
 
 export function Detail({ bird, saved, onToggleSaved, onBack, onOpen }: Props) {
   const [playing, setPlaying] = useState(false);
