@@ -1,0 +1,242 @@
+{
+  "indian-peafowl": {
+    "hz": 900,
+    "count": 2,
+    "gapMs": 420,
+    "mode": "u"
+  },
+  "rose-ringed-parakeet": {
+    "hz": 2800,
+    "count": 3,
+    "gapMs": 130,
+    "mode": "t"
+  },
+  "plum-headed-parakeet": {
+    "hz": 3000,
+    "count": 4,
+    "gapMs": 110,
+    "mode": "u"
+  },
+  "red-vented-bulbul": {
+    "hz": 2400,
+    "count": 4,
+    "gapMs": 150,
+    "mode": "u"
+  },
+  "coppersmith-barbet": {
+    "hz": 1200,
+    "count": 8,
+    "gapMs": 260,
+    "mode": "t"
+  },
+  "common-iora": {
+    "hz": 3200,
+    "count": 3,
+    "gapMs": 300,
+    "mode": "u"
+  },
+  "purple-sunbird": {
+    "hz": 4000,
+    "count": 5,
+    "gapMs": 100,
+    "mode": "t"
+  },
+  "greater-coucal": {
+    "hz": 350,
+    "count": 5,
+    "gapMs": 240,
+    "mode": "d"
+  },
+  "asian-koel": {
+    "hz": 1100,
+    "count": 6,
+    "gapMs": 170,
+    "mode": "u"
+  },
+  "indian-grey-hornbill": {
+    "hz": 1600,
+    "count": 5,
+    "gapMs": 120,
+    "mode": "d"
+  },
+  "indian-roller": {
+    "hz": 1300,
+    "count": 4,
+    "gapMs": 110,
+    "mode": "t"
+  },
+  "brahminy-starling": {
+    "hz": 2600,
+    "count": 6,
+    "gapMs": 90,
+    "mode": "t"
+  },
+  "common-tailorbird": {
+    "hz": 3600,
+    "count": 6,
+    "gapMs": 140,
+    "mode": "u"
+  },
+  "yellow-throated-sparrow": {
+    "hz": 3000,
+    "count": 4,
+    "gapMs": 110,
+    "mode": "d"
+  },
+  "indian-silverbill": {
+    "hz": 4200,
+    "count": 4,
+    "gapMs": 100,
+    "mode": "u"
+  },
+  "indian-robin": {
+    "hz": 3400,
+    "count": 4,
+    "gapMs": 160,
+    "mode": "d"
+  },
+  "ashy-prinia": {
+    "hz": 4300,
+    "count": 3,
+    "gapMs": 150,
+    "mode": "u"
+  },
+  "oriental-magpie-robin": {
+    "hz": 2200,
+    "count": 5,
+    "gapMs": 180,
+    "mode": "u"
+  },
+  "white-browed-fantail": {
+    "hz": 3800,
+    "count": 4,
+    "gapMs": 120,
+    "mode": "d"
+  },
+  "green-bee-eater": {
+    "hz": 3000,
+    "count": 3,
+    "gapMs": 90,
+    "mode": "t"
+  },
+  "white-browed-wagtail": {
+    "hz": 3600,
+    "count": 3,
+    "gapMs": 140,
+    "mode": "u"
+  },
+  "red-wattled-lapwing": {
+    "hz": 2800,
+    "count": 4,
+    "gapMs": 170,
+    "mode": "u"
+  },
+  "white-throated-kingfisher": {
+    "hz": 2000,
+    "count": 6,
+    "gapMs": 110,
+    "mode": "t"
+  },
+  "indian-cormorant": {
+    "hz": 600,
+    "count": 2,
+    "gapMs": 300,
+    "mode": "d"
+  },
+  "savanna-nightjar": {
+    "hz": 3200,
+    "count": 2,
+    "gapMs": 260,
+    "mode": "u"
+  },
+  "river-tern": {
+    "hz": 3800,
+    "count": 4,
+    "gapMs": 100,
+    "mode": "d"
+  },
+  "grey-heron": {
+    "hz": 500,
+    "count": 2,
+    "gapMs": 300,
+    "mode": "d"
+  },
+  "indian-pond-heron": {
+    "hz": 900,
+    "count": 3,
+    "gapMs": 120,
+    "mode": "t"
+  },
+  "indian-vulture": {
+    "hz": 400,
+    "count": 2,
+    "gapMs": 350,
+    "mode": "d"
+  },
+  "egyptian-vulture": {
+    "hz": 700,
+    "count": 2,
+    "gapMs": 300,
+    "mode": "d"
+  },
+  "black-winged-kite": {
+    "hz": 3000,
+    "count": 3,
+    "gapMs": 130,
+    "mode": "u"
+  },
+  "northern-shoveler": {
+    "hz": 900,
+    "count": 2,
+    "gapMs": 200,
+    "mode": "t"
+  },
+  "little-grebe": {
+    "hz": 2600,
+    "count": 6,
+    "gapMs": 80,
+    "mode": "t"
+  },
+  "eurasian-hoopoe": {
+    "hz": 600,
+    "count": 3,
+    "gapMs": 260,
+    "mode": "d"
+  },
+  "crested-serpent-eagle": {
+    "hz": 2400,
+    "count": 4,
+    "gapMs": 200,
+    "mode": "u"
+  },
+  "black-winged-stilt": {
+    "hz": 2800,
+    "count": 5,
+    "gapMs": 90,
+    "mode": "t"
+  },
+  "indian-rock-eagle-owl": {
+    "hz": 350,
+    "count": 2,
+    "gapMs": 500,
+    "mode": "d"
+  },
+  "black-tailed-godwit": {
+    "hz": 2200,
+    "count": 4,
+    "gapMs": 140,
+    "mode": "u"
+  },
+  "ruddy-shelduck": {
+    "hz": 1000,
+    "count": 3,
+    "gapMs": 160,
+    "mode": "u"
+  },
+  "northern-pintail": {
+    "hz": 1800,
+    "count": 2,
+    "gapMs": 200,
+    "mode": "u"
+  }
+}
