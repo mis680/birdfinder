@@ -11,6 +11,11 @@ interface Props {
   onOpen: (id: string) => void;
 }
 
+const LEGACY_BIRD_LINK = /^https?:\/\/statueofunitytentcity\.com\/docs\/birds\//i;
+const wikipediaUrl = (bird: Bird) => LEGACY_BIRD_LINK.test(bird.more)
+  ? `https://en.wikipedia.org/wiki/${encodeURIComponent(bird.name.replace(/\s+/g, '_'))}`
+  : bird.more;
+
 export function Detail({ bird, saved, onToggleSaved, onBack, onOpen }: Props) {
   const [playing, setPlaying] = useState(false);
   const sameFamily = BIRDS.filter((x) => x.id !== bird.id && x.family === bird.family).slice(0, 3);
@@ -46,7 +51,7 @@ export function Detail({ bird, saved, onToggleSaved, onBack, onOpen }: Props) {
           </dl>
           <p className="about">{bird.desc}</p>
           <div className="acts">
-            <a className="btn" href={bird.more} target="_blank" rel="noopener noreferrer">To know more</a>
+            <a className="btn" href={wikipediaUrl(bird)} target="_blank" rel="noopener noreferrer">To know more</a>
             <button type="button" onClick={hear} className={playing ? 'on' : ''} aria-live="polite">
               <span className="eq" aria-hidden="true"><i /><i /><i /></span> Hear call sketch
             </button>
